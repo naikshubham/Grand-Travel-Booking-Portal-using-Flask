@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block body %}
+<h2>{{ the_title }}</h2>
+
+<form method='POST' action='/search'>
+<table>
+<h3>Welcome to GT WebFerry Booking Portal</p>
+<p>Please select from this source locations only --> Bristol, Newcastle ,Portsmouth ,Dundee</p>
+<tr><td>Source:</td><td><input name='source' type='TEXT' width='60'></td></tr>
+</table>
+<table>
+<h4>Please select from this destination locations only --> Bristol, Newcastle ,Portsmouth ,Dundee</h4>
+<tr><td>Destination:</td><td><input name='destination' type='TEXT'></td></tr>
+</table>
+<table>
+<p>Please select the date of Journey (YYYY-MM-DD) 
+<tr><td>Date:</td><td><input name='date' type='TEXT'></td></tr>
+</table>
+<p>When you're done click this button:</p>
+<p><input value='Search!' type='SUBMIT'></p>
+</form>
+
+{% endblock %}

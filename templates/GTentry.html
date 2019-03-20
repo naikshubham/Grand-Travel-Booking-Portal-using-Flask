@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block body %}
+<h2>{{ the_title }}</h2>
+
+<form method='POST' action='/entry'>
+<p>GT Booking Portal</p>
+<input type='SUBMIT' name='submit' value='WebAir'>
+<input type='SUBMIT' name='submit' value='WebTrain'>
+<input type='SUBMIT' name='submit' value='WebTaxi'>
+<input type='SUBMIT' name='submit' value='WebBus'>
+<input type='SUBMIT' name='submit' value='WebFerry'>
+<h3> Admin Maintenance </h3>
+<p> Proceed to admin maintenance </p>
+<input type='SUBMIT' name='submit' value='Admin'>
+</form>
+
+{% endblock %}
+

@@ -1,0 +1,50 @@
+MariaDB [ferrydb]> create table passengers(
+    -> name varchar(200) not NULL,
+    -> booking_id int auto_increment primary key,
+    -> ts timestamp default current_timestamp,
+    -> age int not NULL,
+    -> book_fare float not NULL,
+    -> discount float not NULL);
+
+MariaDB [ferrydb]> select * from ferry;
++------------+-------------+----------+----------+------+
+| source     | destination | dep_time | arr_time | fare |
++------------+-------------+----------+----------+------+
+| bristol    | newcastle   |        8 |       20 |   60 |
+| portsmouth | dundee      |       12 |        0 |  100 |
+| dundee     | portsmouth  |       10 |       22 |  100 |
+| newcastle  | bristol     |     1645 |      445 |   60 |
++------------+-------------+----------+----------+------+
+	
+	
+	
+	
+pass_details
+
++------------+--------------+------+-----+---------+-------+
+| Field      | Type         | Null | Key | Default | Extra |
++------------+--------------+------+-----+---------+-------+
+| booking_id | int(11)      | YES  |     | NULL    |       |
+| name       | varchar(200) | NO   |     | NULL    |       |
+| age        | int(11)      | NO   |     | NULL    |       |
++------------+--------------+------+-----+---------+-------+
+
+
+book_details
+
++------------+-----------+------+-----+-------------------+-------+
+| Field      | Type      | Null | Key | Default           | Extra |
++------------+-----------+------+-----+-------------------+-------+
+| booking_id | int(11)   | NO   | PRI | NULL              |       |
+| ts         | timestamp | NO   |     | CURRENT_TIMESTAMP |       |
+| book_fare  | float     | NO   |     | NULL              |       |
+| discount   | float     | NO   |     | NULL              |       |
+| book_date  | date      | YES  |     | NULL              |       |
++------------+-----------+------+-----+-------------------+-------+
+
+Shubham Naik
+
+personId = request.form.get('personId', type=int)
+
+Date
+YYYY-MM-DD

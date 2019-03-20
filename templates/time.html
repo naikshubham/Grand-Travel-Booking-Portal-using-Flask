@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block body %}
+<h2>{{ the_title }}</h2>
+
+<p>Departure and Arrival Time of your Journey</p>
+<table>
+<tr><td>Source:</td><td>{{ the_source }}</td></tr>
+</table>
+<table>
+<tr><td>Destination:</td><td>{{ the_dest }}</td></tr>
+</table>
+<table>
+<tr><td>Departure time:</td><td>{{ the_dep }}</td></tr>
+</table>
+<table>
+<tr><td>Arrival time:</td><td>{{ the_arr }}</td></tr>
+</table>
+<table>
+<tr><td>Fare per person:</td><td>{{ the_fare }}</td></tr>
+</table>
+
+<form method='POST' action='/book'>
+<p>Please enter the number of tickets you want to book</p>
+<table>
+<tr><td>Number of tickets:</td><td><input name='tickets' type='TEXT'></td></tr>
+</table>
+<p>When you're done click this button:</p>
+<p><input value='Book!' type='SUBMIT'></p>
+</form>
+<!--<p>Your word "{{ the_word }}",the following result is returned:</p>
+<h3>{{ the_results }}</h3> -->
+
+{% endblock %}
+

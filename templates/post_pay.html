@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block body %}
+<h2>{{ the_title }}</h2>
+
+
+<p>Proceed to download your RECEIPT</p>
+<form method='POST' action='/download'>
+<p><input value='Download Receipt' type='SUBMIT'></p>
+</form>
+
+{% endblock %}

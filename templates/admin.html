@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block body %}
+<h2>{{ the_title }}</h2>
+
+
+<form method='POST' action='/admin'>
+<p>Add to the list of journey's</p>
+<input type='SUBMIT' name='submit' value='Add'>
+<p>Modify the journey list</p>
+<input type='SUBMIT' name='submit' value='Modify'>
+<p>Delete from journey list</p>
+<input type='SUBMIT' name='submit' value='Delete'
+</form>
+
+{% endblock %}

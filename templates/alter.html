@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block body %}
+<h2>{{ the_title }}</h2>
+
+<form method='POST' action='{{ the_action }}'>
+<p>Add source</p>
+<table>
+<tr><td>Source to add:</td><td><input name='add_source' type='TEXT'></td></tr>
+</table>
+<table>
+<tr><td>Dest to add:</td><td><input name='add_dest' type='TEXT'></td></tr>
+</table>
+<table>
+<tr><td>Departure time:</td><td><input name='depart_time' type='TEXT'></td></tr>
+</table>
+<table>
+<tr><td>Arrival time:</td><td><input name='arrival_time' type='TEXT'></td></tr>
+</table>
+<table>
+<tr><td>Fare:</td><td><input name='fare' type='TEXT'></td></tr>
+</table>
+<p>Delete {{ the_req_title }} </p>
+<input type='SUBMIT' name='submit' value='Delete'>
+</form>
+
+{% endblock %}

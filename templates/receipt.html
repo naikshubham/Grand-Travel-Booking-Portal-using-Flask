@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block body %}
+<h2>{{ the_title }}</h2>
+
+<form method='POST' action='/'>
+<p><input value='Done' type='SUBMIT'></p>
+
+<p>GRAND TRAVEL FERRY BOOKING RECEIPT</p>
+<table>
+<tr><td>Booking ID:</td><td>{{ the_book_id }}</td></tr>
+</table>
+<table>
+<tr><td>Source:</td><td>{{ the_source }}</td></tr>
+</table>
+<table>
+<tr><td>Destination:</td><td>{{ the_dest }}</td></tr>
+</table>
+<table>
+	<tr>
+		{% for name_age in the_name_age %}
+			<table>
+				<tr><td>Passenger Name:</td><td>{{ name_age[0] }}</td></tr>
+				<tr><td>Passenger Age:</td><td>{{ name_age[1] }}</td></tr>
+			</table>
+		{% endfor %}
+	</tr>
+</table>
+<table>
+<tr><td>Date of Journey:</td><td>{{ the_date }}</td></tr>
+</table>
+<table>
+<tr><td>Departure time:</td><td>{{ the_dep }}</td></tr>
+</table>
+<table>
+<tr><td>Arrival time:</td><td>{{ the_arr }}</td></tr>
+</table>
+<table>
+<tr><td>Total fare:</td><td>{{ the_fare }}</td></tr>
+</table>
+<table>
+<tr><td>Discount received:</td><td>{{ the_discount }}</td></tr>
+</table>
+</form>
+
+{% endblock %}

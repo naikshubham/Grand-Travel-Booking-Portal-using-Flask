@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block body %}
+<h2>{{ the_title }}</h2>
+
+<form method='POST' action='/credit'>
+<p>Choose your payment method</p>
+<p><input value='Credit Card' type='SUBMIT'></p>
+<form/>
+
+<form method='POST' action='/debit'>
+<p><input value='Debit Card' type='SUBMIT'></p>
+<form/>
+
+{% endblock %}

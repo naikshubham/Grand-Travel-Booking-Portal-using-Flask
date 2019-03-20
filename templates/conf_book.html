@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block body %}
+<h2>{{ the_title }}</h2>
+
+<p>Confirm your booking details</p>
+<form method='POST' action='/payment'>
+<table>
+<tr><td>Number of tickets:</td><td>{{ the_tickets }}</td></tr>
+</table>
+<table>
+<tr><td>Source:</td><td>{{ the_source }}</td></tr>
+</table>
+<table>
+<tr><td>Destination:</td><td>{{ the_dest }}</td></tr>
+</table>
+<table>
+<tr><td>Date of Journey:</td><td>{{ the_date }}</td></tr>
+</table>
+<table>
+<tr><td>Total fare:</td><td>{{ the_fare }}</td></tr>
+</table>
+<table>
+<tr><td>Total discount received:</td><td>{{ the_discount }}</td></tr>
+</table>
+<table>
+	<tr>
+		{% for name_age in the_name_age %}
+			<table>
+				<tr><td>Passenger Name:</td><td>{{ name_age[0] }}</td></tr>
+				<tr><td>Passenger Age:</td><td>{{ name_age[1] }}</td></tr>
+			</table>
+		{% endfor %}
+	</tr>
+</table>
+<p>Proceed to pay</p>
+<p><input value='Proceed to Pay!' type='SUBMIT'></p>
+</form>
+
+{% endblock %}

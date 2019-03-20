@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block body %}
+<h2>{{ the_title }}</h2>
+
+<p>Entered Date</p>
+<table>
+<tr><td>Date:</td><td>{{ the_date }}</td></tr>
+</table>
+<p>Maximum bookings have been done on this date"{{ the_date }}".Please select another date</p>
+
+{% endblock %}

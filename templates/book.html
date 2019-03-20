@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<h2>{{ the_title }}</h2>
+
+<form method='POST' action='/tickets'>
+<!--<table>
+<tr><td>Enter no of tickets to book:</td><td><input name=tickets type='TEXT'></td></tr>
+</table>
+<table>
+<tr><td>Enter date of Journey(YYYY-MM-DD):</td><td><input name=date type='TEXT'></td></tr>
+</table>-->
+<table>
+	<tr>
+		{% for i in range(0,the_number_ticket) %}
+			<table>
+				<p>Enter Passenger Details</p>
+				<tr><td>Passenger Name:</td><td><input name=name{{i}} type='TEXT'></td></tr>
+				<tr><td>Passenger Age:</td><td><input name=age{{i}} type='TEXT'></td></tr>
+			</table>
+		{% endfor %}
+	</tr>
+</table>
+<p>When you're done click this button:</p>
+<p><input value='Book!' type='SUBMIT'></p>
+</form>
+
+{% endblock %}

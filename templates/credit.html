@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block body %}
+<h2>{{ the_title }}</h2>
+
+<p>{{ the_card }}</p>
+<form method='POST' action='/post_pay'>
+<table>
+<tr><td>Name on Card:</td><td><input name='card_name' type='TEXT'></td></tr>
+</table>
+<table>
+<tr><td>Card Number:</td><td><input name='card_number' type='TEXT'></td></tr>
+</table>
+<table>
+<tr><td>CVV:</td><td><input name='cvv' type='TEXT'></td></tr>
+</table>
+<p><input value='Pay' type='SUBMIT'></p>
+</form>
+
+{% endblock %}
